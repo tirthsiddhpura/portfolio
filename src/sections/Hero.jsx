@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Star } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const stats = [

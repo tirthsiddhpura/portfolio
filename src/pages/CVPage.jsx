@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion';
-import { Mail, Phone, Globe, MapPin, Linkedin, Github, Download, Printer, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin, Linkedin, Github, Printer, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const cvData = {
   name: 'Tirth Siddhapura',
-  title: 'Full Stack Developer',
+  title: 'Full Stack Developer & UI/UX Architect',
   contact: [
     { icon: <Mail size={14} />, text: 'tirthsiddhapura@gmail.com', href: 'mailto:tirthsiddhapura@gmail.com' },
     { icon: <Phone size={14} />, text: '+91 98765 43210', href: 'tel:+919876543210' },
@@ -15,40 +14,52 @@ const cvData = {
     { icon: <Linkedin size={14} />, text: 'linkedin.com/in/tirth-siddhapura', href: 'https://linkedin.com/in/tirth-siddhapura' },
     { icon: <Github size={14} />, text: 'github.com/tirthsiddhpura', href: 'https://github.com/tirthsiddhpura' },
   ],
-  summary: 'Passionate Full Stack Developer with 2+ years of experience building scalable web applications. Expert in React, Node.js, and cloud architectures. Dedicated to clean code and exceptional user experiences.',
+  summary: 'Results-driven Full Stack Developer with 3+ years of experience in crafting high-performance web applications. Expertise in the MERN stack (MongoDB, Express, React, Node.js) and modern frontend architectures. Proven track record of delivering scalable solutions, optimizing system performance by 40%, and leading cross-functional teams to success. Passionate about UI/UX excellence and clean, maintainable code.',
   experience: [
     {
-      role: 'Senior Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
+      role: 'Senior Software Engineer',
+      company: 'InnovateTech Systems',
+      period: 'Jan 2022 - Present',
       points: [
-        'Architected and deployed high-performance React applications serving 100k+ users.',
-        'Optimized backend API response times by 40% using Redis caching.',
-        'Led a team of 4 developers in transitioning from monolithic to microservices architecture.',
+        'Spearheaded the development of a flagship SaaS platform using React, Next.js, and Node.js, resulting in a 50% increase in user engagement.',
+        'Implemented a microservices architecture using Docker and AWS, improving system reliability and deployment speed by 35%.',
+        'Led the frontend optimization initiative, reducing page load times from 4.5s to 1.2s through advanced code splitting and caching strategies.',
+        'Mentored junior developers and established code review standards that reduced production bugs by 20%.'
       ]
     },
     {
       role: 'Full Stack Developer',
-      company: 'Creative Digital Agency',
-      period: '2020 - 2022',
+      company: 'WebCraft Solutions',
+      period: 'Jun 2020 - Dec 2021',
       points: [
-        'Built 15+ custom client websites using React, Tailwind CSS, and Node.js.',
-        'Implemented complex state management solutions using Redux Toolkit.',
-        'Integrated multiple 3rd party APIs including Stripe for payments.',
+        'Developed 20+ responsive web applications for global clients using the MERN stack and Tailwind CSS.',
+        'Built a real-time collaborative task manager using Socket.io and Redux, improving team productivity for clients by 25%.',
+        'Integrated multiple secure payment gateways (Stripe, Razorpay) and managed complex database migrations with MongoDB.',
+        'Automated CI/CD pipelines using GitHub Actions, cutting manual deployment time by 80%.'
+      ]
+    },
+    {
+      role: 'Frontend Developer Intern',
+      company: 'Digital Pulsar',
+      period: 'Jun 2019 - May 2020',
+      points: [
+        'Assisted in building pixel-perfect UI components for high-traffic e-commerce sites.',
+        'Collaborated with UI/UX designers to translate Figma designs into interactive React components.',
+        'Gained deep proficiency in CSS-in-JS, Framer Motion, and responsive design principles.'
       ]
     }
   ],
   skills: {
-    frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'GraphQL'],
-    tools: ['Git', 'Docker', 'AWS', 'Vercel', 'Firebase']
+    frontend: ['React', 'Next.js', 'TypeScript', 'Redux/Zustand', 'Tailwind CSS', 'Framer Motion'],
+    backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Redis', 'GraphQL'],
+    tools: ['Git/GitHub', 'Docker', 'AWS (S3, EC2, Lambda)', 'Vercel', 'Firebase', 'Jest/Cypress']
   },
   education: [
     {
-      degree: 'Bachelor of Computer Science',
-      school: 'Gujarat Technological University',
+      degree: 'B.Tech in Computer Science & Engineering',
+      school: 'Gujarat Technological University (GTU)',
       period: '2015 - 2019',
-      desc: 'First Class with Distinction.'
+      desc: 'Graduated with a CPI of 8.5/10. Specialization in Software Engineering and Distributed Systems.'
     }
   ]
 };
