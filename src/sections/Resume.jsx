@@ -1,6 +1,7 @@
 import Section from '../components/Section';
 import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const experience = [
   {
@@ -122,9 +123,9 @@ export default function Resume() {
         className="mt-16 text-center"
       >
         <p className="text-muted-foreground mb-6">Want to see the full details?</p>
-        <a href="/resume.pdf" download className="glow-primary inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold transition-all hover:scale-105">
-          Download Full CV (PDF)
-        </a>
+        <Link to="/cv" className="glow-primary inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold transition-all hover:scale-105">
+          View & Print Full CV
+        </Link>
       </motion.div>
     </Section>
   );
