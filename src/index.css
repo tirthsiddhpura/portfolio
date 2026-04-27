@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 258 90% 96%;
+    --accent-foreground: 258 90% 30%;
+    --border: 220 13% 91%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 213 31% 91%;
+    --border: 216 34% 17%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+}
+
+/* ─── Glassmorphism ─────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.dark .glass {
+  background: rgba(15,15,35,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.9) inset;
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .glass-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.04) inset;
+}
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(124,58,237,0.15), 0 1px 0 rgba(255,255,255,0.9) inset;
+}
+.dark .glass-card:hover {
+  box-shadow: 0 20px 60px rgba(124,58,237,0.25), 0 1px 0 rgba(255,255,255,0.04) inset;
+}
+
+/* ─── Gradient Text ─────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, hsl(258,90%,66%), #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glow Effects ──────────────────────────── */
+.glow-primary {
+  box-shadow: 0 0 30px rgba(139,92,246,0.4), 0 0 60px rgba(139,92,246,0.1);
+}
+.glow-primary:hover {
+  box-shadow: 0 0 40px rgba(139,92,246,0.6), 0 0 80px rgba(139,92,246,0.2);
+}
+
+/* ─── Animated Gradient Border ──────────────── */
+.gradient-border {
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  padding: 2px;
+  border-radius: 9999px;
+}
+
+/* ─── Skill Bar ─────────────────────────────── */
+.skill-bar-track {
+  height: 6px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.dark .skill-bar-track {
+  background: rgba(255,255,255,0.08);
+}
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(258,90%,66%), #ec4899);
+}
+
+/* ─── Section Divider ───────────────────────── */
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, hsl(258,90%,66%), #ec4899);
+  border-radius: 999px;
+  margin: 1rem auto 0;
+}
+
+/* ─── Badge ─────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(139,92,246,0.12);
+  color: hsl(258,90%,66%);
+  border: 1px solid rgba(139,92,246,0.25);
+}
+.dark .badge {
+  background: rgba(139,92,246,0.18);
+}
+
+/* ─── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(258,90%,66%); border-radius: 999px; }
+
+/* ─── Selection ─────────────────────────────── */
+::selection { background: rgba(139,92,246,0.2); color: hsl(258,90%,50%); }
+
+/* ─── Floating animation ────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.float { animation: float 4s ease-in-out infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(139,92,246,0.3); }
+  50% { box-shadow: 0 0 40px rgba(139,92,246,0.6), 0 0 80px rgba(236,72,153,0.2); }
+}
+.pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* ─── Input focus ───────────────────────────── */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid hsl(var(--border));
+  background: rgba(0,0,0,0.03);
+  color: hsl(var(--foreground));
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 0.9rem;
+}
+.dark .form-input {
+  background: rgba(255,255,255,0.04);
+}
+.form-input:focus {
+  border-color: hsl(258,90%,66%);
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.12);
+}
+.form-input::placeholder { color: hsl(var(--muted-foreground)); opacity: 0.7; }
