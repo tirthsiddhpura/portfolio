@@ -65,9 +65,9 @@ export default function Hero() {
                 style={{ background: 'linear-gradient(135deg, hsl(258,90%,66%), #a855f7)' }}>
                 View Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="/resume.pdf" download
+              <a href="#resume"
                 className="glass flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105">
-                <Download size={16} /> Download CV
+                View Resume <ArrowRight size={16} className="rotate-45" />
               </a>
             </motion.div>
 
